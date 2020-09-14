@@ -10,12 +10,12 @@
       <div class="user-navigation">
         <div class="user-navigation-container">
           <a>
-            <img src="https://via.placeholder.com" width="220" height="47"> <!--alt="Логотип интернет-магазина Техномарт."-->
+            <img src="https://via.placeholder.com" width="220" height="47" alt="Логотип интернет-магазина Техномарт.">
           </a>
-          <input class="user-navigation-container-search" type="text" placeholder="Поиск">  <!--Нужно ли задавать name и вообще нужен ли тут инпут-->
-          <p>Закладки: 0</p>
-          <p>Корзина: 0</p>
-          <a href="#">Оформить заказ</a>
+          <input class="user-navigation-search" type="text" placeholder="Поиск">  <!--Нужно ли задавать name и вообще нужен ли тут инпут-->
+          <a class="bookmarks" href="#">Закладки: 0</a>
+          <a class="basket" href="#">Корзина: 0</a>
+          <a class="order" href="#">Оформить заказ</a>
         </div>
       </div>
 
@@ -32,11 +32,6 @@
         <div class="user-area user-log-out">
           <a href="#">Войти</a>
           <a href="#">Регистрация</a>
-        </div>
-        <div class="user-area user-log-in visually-hidden">
-          <p>Равшан Джамшутович</p> <!--Как правильно сделать этот элемент ? -->
-          <span>Мои заказы</span>
-          <span>Личный кабинет</span> <!--Это должны быть ссылки или нет ? -->
         </div>
         <nav>
           <ul class="main-navigation">
@@ -94,10 +89,13 @@
           </div>
           <div class="promo-slider">
             <div class="promo-slider-first-slide">
-              <div class="promo-slider-header">  <!--В слайдере картинка должна быть контентной или фоновой ? -->
+              <div class="promo-slider-header">
                 <h3>Перфораторы</h3>
                 <p>Настоящие мужские игрушки</p>
               </div>
+              <img src="https://via.placeholder.com" width="620" height="266" alt="Посмотрите на наш ассортимент перфораторов.">
+              <button type="button"></button> <!--Как здесь будет лучше сделать - прописать в них текст на случай если стили не подгрузились или еще грузяться и убрать его через фонт-сайз или же через спан с классом visually ?-->
+              <button type="button"></button>
               <a href="inner.html">открыть каталог</a>
               <div class="promo-slider-control-container">
                 <div class="promo-slider-control"></div>
@@ -109,40 +107,60 @@
                 <h3>Дрели</h3>
                 <p>Соседям на радость!</p>
               </div>
+              <img src="https://via.placeholder.com" width="620" height="266" alt="Посмотрите на наш ассортимент дрелей.">
+              <button type="button"></button>
+              <button type="button"></button>
               <a href="inner.html">открыть каталог</a>
               <div class="promo-slider-control-container">
                 <div class="promo-slider-control"></div>
                 <div class="promo-slider-control"></div>
               </div>
+            </div>
           </div>
         </section>
 
         <section class="popular-product">
-          <div class="popular-product-header"> <!--Спросить как лучше сделать - оставить див как шапку секшена или использовать хэдэр ?-->
-            <h2>Популярные товары:</h2> <!--Можно ли оставить заголовок внутри дива или он должен быть непосредственно ребенком секшена ? -->
+          <div class="popular-product-header">
+            <h2>Популярные товары:</h2>
             <a href="#">все популярные товары</a>
           </div>
           <ul class="popular-product-list">
             <li class="popular-product-item">
-              <img src="https://via.placeholder.com" width="185" height="165"> <!--alt="Фото перфоратора."-->
+              <div class=catalog-item-hover>
+                <button type="button">Купить</button>
+                <button type="button">В закладки</button>
+              </div>
+              <img src="https://via.placeholder.com" width="185" height="165" alt="Фото перфоратора.">
               <p>Перфоратор BOSCH BFG 9000</p>
               <p>32500 Р.</p>
               <p>25500 Р.</p>
             </li>
             <li class="popular-product-item">
-              <img src="https://via.placeholder.com" width="145" height="128"> <!--alt="Фото перфоратора."-->
+              <div class=catalog-item-hover>
+                <button type="button">Купить</button>
+                <button type="button">В закладки</button>
+              </div>
+              <img src="https://via.placeholder.com" width="145" height="128" alt="Фото перфоратора.">
               <p>Перфоратор BOSCH BFG 3000</p>
               <p>22500 Р.</p>
               <p>15500 Р.</p>
             </li>
             <li class="popular-product-item">
-              <img src="https://via.placeholder.com" width="145" height="128"> <!--alt="Фото перфоратора."-->
+              <div class=catalog-item-hover>
+                <button type="button">Купить</button>
+                <button type="button">В закладки</button>
+              </div>
+              <img src="https://via.placeholder.com" width="145" height="128" alt="Фото перфоратора.">
               <p>Перфоратор BOSCH BFG 6000</p>
               <p>30500 Р.</p>
               <p>25500 Р.</p>
             </li>
             <li class="popular-product-item">
-              <img src="https://via.placeholder.com" width="145" height="128"> <!--alt="Фото перфоратора."-->
+              <div class=catalog-item-hover>
+                <button type="button">Купить</button>
+                <button type="button">В закладки</button>
+              </div>
+              <img src="https://via.placeholder.com" width="145" height="128" alt="Фото перфоратора.">
               <p>Перфоратор BOSCH BFG 2000</p>
               <p>12500 Р.</p>
             </li>
@@ -157,42 +175,42 @@
           <ul class="popular-manufacturer-list">
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="126" height="37"> <!--alt="Bosch"-->
+                <img src="https://via.placeholder.com" width="126" height="37" alt="Bosch">
               </a>
             </li>
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="123" height="40"> <!--alt="Makita"-->
+                <img src="https://via.placeholder.com" width="123" height="40" alt="Makita">
               </a>
             </li>
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="146" height="44"> <!--alt="DeWalt"-->
+                <img src="https://via.placeholder.com" width="146" height="44" alt="DeWalt">
               </a>
             </li>
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="200" height="75"> <!--alt="Интерскол"-->
+                <img src="https://via.placeholder.com" width="200" height="75" alt="Интерскол">
               </a>
             </li>
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="169" height="31"> <!--alt="Hitachi"-->
+                <img src="https://via.placeholder.com" width="169" height="31" alt="Hitachi">
               </a>
             </li>
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="121" height="73"> <!--alt="LG"-->
+                <img src="https://via.placeholder.com" width="121" height="73" alt="LG">
               </a>
             </li>
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="151" height="96"> <!--alt="AEG"-->
+                <img src="https://via.placeholder.com" width="151" height="96" alt="AEG">
               </a>
             </li>
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="204" height="69"> <!--alt="Metabo"-->
+                <img src="https://via.placeholder.com" width="204" height="69" alt="Metabo">
               </a>
             </li>
           </ul>
@@ -208,9 +226,9 @@
           </p>
           <div class="services-slider">
             <ul class="services-slider-controls-list">
-              <li class="services-slider-controls-item">Доставка</li>
-              <li class="services-slider-controls-item">Гарантия</li>
-              <li class="services-slider-controls-item">Кредит</li>
+              <li class="services-slider-controls-item"><button type="button">Доставка</button></li>
+              <li class="services-slider-controls-item"><button type="button">Гарантия</button></li>
+              <li class="services-slider-controls-item"><button type="button">Кредит</button></li>
             </ul>
             <div class="services-slider-delivery">
               <h3>Доставка</h3>
@@ -270,7 +288,7 @@
               Вы можете забрать товар сами, 
               заехав в наш офис:
             </p>
-            <img src="https://via.placeholder.com" width="300" height="158"> <!--alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"-->
+            <img src="https://via.placeholder.com" width="300" height="158" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
             <a href="#">Заблудились? Напишите нам!</a>
           </div>
         </div>
@@ -281,7 +299,7 @@
       <div class="footer-main-container">
         <div class="footer-navigation-container">
           <a>
-            <img src="https://via.placeholder.com" width="220" height="68"> <!--alt="Логотип интернет-магазина Техномарт"-->
+            <img src="https://via.placeholder.com" width="220" height="68" alt="Логотип интернет-магазина Техномарт">
           </a>
           <ul class="footer-navigation-list">
             <li class="footer-navigation-item">
@@ -303,7 +321,7 @@
         </div>
         <div class="footer-assortment-container">
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-          <p><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
+          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           <ul class="footer-assortment-list">
             <li class="footer-assortment-item">
               <a href="#">Материалы</a>
@@ -329,19 +347,13 @@
           </p>
           <ul class="footer-social-list">
             <li class="footer-social-item">
-              <a href="#">
-                <span class="visually-hidden">Вконтакте</span>
-              </a>
+              <a href="#">Вконтакте</a>
             </li>
             <li class="footer-social-item">
-              <a href="#">
-                <span class="visually-hidden">Фэйсбук</span>
-              </a>
+              <a href="#">Фэйсбук</a>
             </li>
             <li class="footer-social-item">
-              <a href="#">
-                <span class="visually-hidden">Инстаграм</span>
-              </a>
+              <a href="#">Инстаграм</a>
             </li>
           </ul>
           <p>
