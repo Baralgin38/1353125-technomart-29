@@ -17,7 +17,7 @@
             <input class="user-navigation-search" type="text" name="search" placeholder="Поиск">
            </form>
           <a class="bookmarks" href="#">Закладки: 0</a>
-          <a class="basket" href="#">Корзина: 0</a>
+          <a class="basket basket-current" href="#">Корзина: 10</a>
           <a class="order" href="#">Оформить заказ</a>
         </div>
       </div>
@@ -29,13 +29,13 @@
           и инструментов для ремонта<br>
         </p>
         <div class="header-phone-container">
-          <div class="header-phone"><a href="tel:+78125550555">+7 (812) 555-05-55</a></div>
+          <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
         <div class="user-area user-log-in">
           <div class="user-log-in-container">
             <a class="user-log-in-link" href="#">
-              <p>Равшан Джамшутович</p>
+              Равшан Джамшутович
             </a>
             <button type="button"></button>
           </div>
@@ -44,25 +44,25 @@
         </div>
         <nav>
           <ul class="main-navigation">
-            <li>
+            <li class="main-navigation-item">
               <a href="index.html">Главная</a>
             </li>
-            <li>
+            <li class="main-navigation-item">
               <a href="#">Компания</a>
             </li>
-            <li>
+            <li class="main-navigation-item">
               <a href="#">Каталог</a>
             </li>
-            <li>
+            <li class="main-navigation-item">
               <a href="#">Новости</a>
             </li>
-            <li>
+            <li class="main-navigation-item">
               <a href="#">Спецпредложения</a>
             </li>
-            <li>
+            <li class="main-navigation-item">
               <a href="#">Доставка</a>
             </li>
-            <li>
+            <li class="main-navigation-item">
               <a href="#">Контакты</a>
             </li>
           </ul>
@@ -85,15 +85,15 @@
           <p><a>Перфораторы</a></p>
         </div>
 
-        <h2 class="catalog-header">Перфораторы</h2>
+        <h2 class="catalog-header">Перфораторы</h2> <!--без доп. обертки не сделать как по макету должно быть-->
 
         <div class="sorting">
           <p>Сортировка:</p>
-          <p>по цене</p>
-          <p>по типу</p>
-          <p>по функционалу</p>
-          <button type="button"></button>
-          <button type="button"></button>
+          <button class="sorting-price sorting-button sorting-current" type="button">по цене</button>
+          <button class="sorting-type sorting-button" type="button">по типу</button>
+          <button class="sorting-function sorting-button" type="button">по функционалу</button>
+          <button class="sorting-up" type="button"></button>
+          <button class="sorting-down" type="button"></button>
         </div>
 
         <section class="catalog">
@@ -102,51 +102,51 @@
             <li class="catalog-item">
               <img src="https://via.placeholder.com" width="144" height="128" alt="Фото перфоратора.">
               <p>Перфоратор BOSCH BFG 6000</p>
-              <p>30500 Р.</p>
+              <p class="catalog-item-oldprice">30500 Р.</p>
               <p>25500 Р.</p>
               <div class="product-item-hover"> <!-- по умоланию будет display: block-->
-                <button type="button">Купить</button>
-                <button type="button">В закладки</button>
+                <button class="button-buy button" type="button">Купить</button>
+                <button class="button-mark button" type="button">В закладки</button>
               </div>
             </li>
             <li class="catalog-item">
               <img src="https://via.placeholder.com" width="144" height="128" alt="Фото перфоратора.">
               <p>Перфоратор BOSCH BFG 6000</p>
-              <p>30500 Р.</p>
+              <p class="catalog-item-oldprice">30500 Р.</p>
               <p>25500 Р.</p>
               <div class="product-item-hover">
-                <button type="button">Купить</button>
-                <button type="button">В закладки</button>
+                <button class="button-buy button" type="button">Купить</button>
+                <button class="button-mark button" type="button">В закладки</button>
               </div>
             </li>
             <li class="catalog-item">
               <img src="https://via.placeholder.com" width="144" height="128" alt="Фото перфоратора.">
               <p>Перфоратор BOSCH BFG 6000</p>
-              <p>30500 Р.</p>
+              <p class="catalog-item-oldprice">30500 Р.</p>
               <p>25500 Р.</p>
               <div class="product-item-hover">
-                <button type="button">Купить</button>
-                <button type="button">В закладки</button>
+                <button class="button-buy button" type="button">Купить</button>
+                <button class="button-mark button" type="button">В закладки</button>
               </div>
             </li>
             <li class="catalog-item">
               <img src="https://via.placeholder.com" width="144" height="128" alt="Фото перфоратора.">
               <p>Перфоратор BOSCH BFG 3000</p>
-              <p>22500 Р.</p>
+              <p class="catalog-item-oldprice">22500 Р.</p>
               <p>15500 Р.</p>
               <div class="product-item-hover">
-                <button type="button">Купить</button>
-                <button type="button">В закладки</button>
+                <button class="button-buy button" type="button">Купить</button>
+                <button class="button-mark button" type="button">В закладки</button>
               </div>
             </li>
             <li class="catalog-item">
               <img src="https://via.placeholder.com" width="144" height="128" alt="Фото перфоратора.">
               <p>Перфоратор BOSCH BFG 6000</p>
-              <p>30500 Р.</p>
+              <p class="catalog-item-oldprice">30500 Р.</p>
               <p>25500 Р.</p>
               <div class="product-item-hover">
-                <button type="button">Купить</button>
-                <button type="button">В закладки</button>
+                <button class="button-buy button" type="button">Купить</button>
+                <button class="button-mark button" type="button">В закладки</button>
               </div>
             </li>
             <li class="catalog-item">
@@ -154,28 +154,28 @@
               <p>Перфоратор BOSCH BFG 2000</p>
               <p>12500 Р.</p>
               <div class="product-item-hover">
-                <button type="button">Купить</button>
-                <button type="button">В закладки</button>
+                <button class="button-buy button" type="button">Купить</button>
+                <button class="button-mark button" type="button">В закладки</button>
               </div>
             </li>
             <li class="catalog-item">
               <img src="https://via.placeholder.com" width="144" height="128" alt="Фото перфоратора.">
               <p>Перфоратор BOSCH BFG 3000</p>
-              <p>22500 Р.</p>
+              <p class="catalog-item-oldprice">22500 Р.</p>
               <p>15500 Р.</p>
               <div class="product-item-hover">
-                <button type="button">Купить</button>
-                <button type="button">В закладки</button>
+                <button class="button-buy button" type="button">Купить</button>
+                <button class="button-mark button" type="button">В закладки</button>
               </div>
             </li>
             <li class="catalog-item">
               <img src="https://via.placeholder.com" width="144" height="128" alt="Фото перфоратора.">
               <p>Перфоратор BOSCH BFG 6000</p>
-              <p>30500 Р.</p>
+              <p class="catalog-item-oldprice">30500 Р.</p>
               <p>25500 Р.</p>
               <div class="product-item-hover">
-                <button type="button">Купить</button>
-                <button type="button">В закладки</button>
+                <button class="button-buy button" type="button">Купить</button>
+                <button class="button-mark button" type="button">В закладки</button>
               </div>
             </li>
             <li class="catalog-item">
@@ -183,15 +183,15 @@
               <p>Перфоратор BOSCH BFG 2000</p>
               <p>12500 Р.</p>
               <div class="product-item-hover">
-                <button type="button">Купить</button>
-                <button type="button">В закладки</button>
+                <button class="button-buy button" type="button">Купить</button>
+                <button class="button-mark button" type="button">В закладки</button>
               </div>
             </li>
           </ul>
         </section>
 
         <div class="catalog-controls">
-          <a href="#">1</a>
+          <a class="current-page" href="#">1</a>
           <a href="#">2</a>
           <a href="#">3</a>
           <button type="button">Следующая</button>
@@ -218,25 +218,25 @@
           </a>
           <ul class="footer-navigation-list">
             <li class="footer-navigation-item">
-              <a href="#">Компания</a>
+              <a class="footer-navigation-company" href="#">Компания</a>
             </li>
             <li class="footer-navigation-item">
-              <a href="#">Новости</a>
+              <a class="footer-navigation-news" href="#">Новости</a>
             </li>
             <li class="footer-navigation-item">
-              <a href="#">Каталог</a>
+              <a class="footer-navigation-catalog" href="#">Каталог</a>
             </li>
             <li class="footer-navigation-item">
-              <a href="#">Доставка</a>
+              <a class="footer-navigation-delivery" href="#">Доставка</a>
             </li>
             <li class="footer-navigation-item">
-              <a href="#">Контакты</a>
+              <a class="footer-navigation-contacts" href="#">Контакты</a>
             </li>
           </ul>
         </div>
         <div class="footer-assortment-container">
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <ul class="footer-assortment-list">
             <li class="footer-assortment-item">
               <a href="#">Материалы</a>
@@ -273,11 +273,11 @@
           </ul>
           <p>
             Обратная связь:<br>
-            <a href="https://htmlacademy.ru/contacts">mail@htmlacademy.ru</a>    
+            <a class="feedback" href="https://htmlacademy.ru/contacts">mail@htmlacademy.ru</a>    
           </p>
           <p>
             Разработано —<br>
-            <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+            <a class="developed" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
           </p>
         </div>
       </div>
