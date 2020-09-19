@@ -265,6 +265,7 @@ input[type="radio"].visually-hidden {
   display: inline-block;
   
   padding: 12px 24px;
+
   background-color: var(--white);
 }
 
@@ -334,14 +335,28 @@ input[type="radio"].visually-hidden {
 .promo-delivery a {
   display: inline-block;
   
-  width: 135px;
-  height: 38px;
-  
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
 
   background-color: var(--promo-link);
+}
+
+.promo-materials a,
+.promo-discount a {
+  padding: 10px 23px;
+}
+
+.promo-tool a {
+  padding: 10px 26px;
+}
+
+.promo-technic a {
+  padding: 10px 30px;
+}
+
+.promo-delivery a {
+  padding: 10px 36px;
 }
 
 .promo-materials a:hover,
@@ -388,13 +403,9 @@ input[type="radio"].visually-hidden {
 .promo-slider-first-slide,
 .promo-slider-second-slide {
   width: 620px;
-  height: 266px; /*Временно добавлено !*/
+  height: 266px; /*Подложка под изображение*/
   
   background-color: var(--basic-greylight);
-}
-
-.promo-slider-header {
-  background-color: var(--black-alpha);
 }
 
 .promo-slider-first-slide h3,
@@ -450,12 +461,23 @@ input[type="radio"].visually-hidden {
   color: var(--dark-blue);
 }
 
-.popular-product-header a,
+.popular-product-header a {
+  display: inline-block;
+  
+  padding: 10px 24px;
+
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  color: var(--white);
+  background-color: var(--basic-red);
+}
+
 .popular-manufacturer-header a {
   display: inline-block;
 
-  width: 192px;
-  height: 38px;
+  padding: 10px 38px;
 
   font-size: 14px;
   line-height: 18px;
@@ -533,27 +555,35 @@ input[type="radio"].visually-hidden {
 
 .product-item-hover .button-buy:hover, 
 .product-item-hover .button-buy:focus {
+  outline: 0; /* Здесь и далее этот фрагмент убирает outline в хроме и пунктир в ФФ */
+  outline-offset: 0;
   background-color: var(--hover-green);
 }
 
 .product-item-hover .button-buy:active {
+  outline: 0;
+  outline-offset: 0;
   background-color: var(--active-green);
 }
 
 .product-item-hover .button-mark {
-  color: var(--basic-black);
-  background-color: var(--white);
   border: 3px solid var(--basic-green);
+  color: var(--dark-blue);
+  background-color: var(--white);
 }
 
 .product-item-hover .button-mark:hover,
 .product-item-hover .button-mark:focus {
   border: 3px solid var(--dark-blue);
+  outline: 0;
+  outline-offset: 0;
 }
 
 .product-item-hover .button-mark:active {
-  color: var(--basic-greylight);
   border: 3px solid var(--basic-greylight);
+  outline: 0;
+  outline-offset: 0;
+  opacity: .5;
 }
 
 /*-----popular-manufacturer-------*/
@@ -591,12 +621,14 @@ input[type="radio"].visually-hidden {
 .services-slider-controls-button {
   width: 240px;
   height: 60px;
+
+  border: none;
   
+  font-family: inherit;
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
   
-  border: none;
   box-shadow:
    0px 1px 0px var(--basic-darkgrey),
   inset 0px 1px 0px var(--inset-button-services-slider);
@@ -606,10 +638,14 @@ input[type="radio"].visually-hidden {
 
 .services-slider-controls-button:hover,
 .services-slider-controls-button:focus {
+  outline: 0;
+  outline-offset: 0;
   background-color: var(--basic-darkgrey);
 }
 
 .services-slider-controls-button:active {
+  outline: 0;
+  outline-offset: 0;
   box-shadow: 0px 1px 0px var(--white);
   color: var(--dark-blue);
   background-color: var(--white);
@@ -622,10 +658,12 @@ input[type="radio"].visually-hidden {
 }
 
 .services-slider-credit a {
-  display: block;
+  display: inline-block;
 
-  width: 195px;
-  height: 38px;
+  padding-top: 13px;
+  padding-right: 43px;
+  padding-bottom: 15px;
+  padding-left: 46px;
   border-radius: 3px;
 
   font-size: 14px;
@@ -672,10 +710,9 @@ input[type="radio"].visually-hidden {
 }
 
 .more {
-  display: block;
+  display: inline-block;
 
-  width: 220px;
-  height: 38px;
+  padding: 10px 40px;
 
   font-size: 14px;
   line-height: 18px;
@@ -686,10 +723,9 @@ input[type="radio"].visually-hidden {
 }
 
 .write-us {
-  display: block;
+  display: inline-block;
 
-  width: 300px;
-  height: 38px;
+  padding: 10px 61px;
 
   font-size: 14px;
   line-height: 18px;
@@ -865,13 +901,17 @@ input[type="radio"].visually-hidden {
 .sorting-button:hover,
 .sorting-button:focus {
   border-bottom: 1px solid var(--basic-red);
-
+  
+  outline: 0;
+  outline-offset: 0;
   color: var(--basic-black);
 }
 
 .sorting-button:active {
   border: none;
-
+  
+  outline: 0;
+  outline-offset: 0;
   color: var(--basic-red);
 }
 
@@ -926,10 +966,9 @@ input[type="radio"].visually-hidden {
 .catalog-controls a {
   display: inline-block;
   
-  width: 38px;
-  height: 38px;
-
+  padding: 10px 15px;
   border: 1px solid var(--pagination-border-color);
+  
   border-radius: 2px;
 }
 
@@ -952,6 +991,7 @@ input[type="radio"].visually-hidden {
   height: 38px;
 
   border: 1px solid var(--pagination-border-color);
+  
   border-radius: 2px;
 
   font-family: inherit;

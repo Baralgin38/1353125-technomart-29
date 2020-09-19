@@ -92,13 +92,11 @@
           </div>
           <div class="promo-slider">
             <div class="promo-slider-first-slide">
-              <div class="promo-slider-header">
-                <h3>Перфораторы</h3>
-                <p>Настоящие мужские игрушки</p>
-              </div>
+              <h3>Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
               <img src="https://via.placeholder.com" width="620" height="266" alt="Посмотрите на наш ассортимент перфораторов.">
-              <button type="button"></button> <!--Как здесь будет лучше сделать - прописать в них текст на случай если стили не подгрузились или еще грузяться и убрать его через фонт-сайз или же через спан с классом visually ?-->
-              <button type="button"></button>
+              <button type="button" aria-label="предыдущий слайд"></button> 
+              <button type="button" aria-label="следующий слайд"></button>
               <a href="inner.html">открыть каталог</a>
               <div class="promo-slider-control-container">
                 <div class="promo-slider-control"></div>
@@ -106,13 +104,11 @@
               </div>
             </div>
             <div class="promo-slider-second-slide">
-              <div class="promo-slider-header">
-                <h3>Дрели</h3>
-                <p>Соседям на радость!</p>
-              </div>
+              <h3>Дрели</h3>
+              <p>Соседям на радость!</p>
               <img src="https://via.placeholder.com" width="620" height="266" alt="Посмотрите на наш ассортимент дрелей.">
-              <button type="button"></button>
-              <button type="button"></button>
+              <button type="button" aria-label="предыдущий слайд"></button>
+              <button type="button" aria-label="следующий слайд"></button>
               <a href="inner.html">открыть каталог</a>
               <div class="promo-slider-control-container">
                 <div class="promo-slider-control"></div>
@@ -178,42 +174,42 @@
           <ul class="popular-manufacturer-list">
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="126" height="37" alt="Bosch">
+                <img src="https://via.placeholder.com" width="126" height="37" alt="Bosch.">
               </a>
             </li>
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="123" height="40" alt="Makita">
+                <img src="https://via.placeholder.com" width="123" height="40" alt="Makita.">
               </a>
             </li>
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="146" height="44" alt="DeWalt">
+                <img src="https://via.placeholder.com" width="146" height="44" alt="DeWalt.">
               </a>
             </li>
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="200" height="75" alt="Интерскол">
+                <img src="https://via.placeholder.com" width="200" height="75" alt="Интерскол.">
               </a>
             </li>
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="169" height="31" alt="Hitachi">
+                <img src="https://via.placeholder.com" width="169" height="31" alt="Hitachi.">
               </a>
             </li>
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="121" height="73" alt="LG">
+                <img src="https://via.placeholder.com" width="121" height="73" alt="LG.">
               </a>
             </li>
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="151" height="96" alt="AEG">
+                <img src="https://via.placeholder.com" width="151" height="96" alt="AEG.">
               </a>
             </li>
             <li class="popular-manufacturer-item">
               <a href="#">
-                <img src="https://via.placeholder.com" width="204" height="69" alt="Metabo">
+                <img src="https://via.placeholder.com" width="204" height="69" alt="Metabo.">
               </a>
             </li>
           </ul>
@@ -229,9 +225,15 @@
           </p>
           <div class="services-slider">
             <ul class="services-slider-controls-list">
-              <li class="services-slider-controls-item"><button class="services-slider-controls-button services-button-current" type="button">Доставка</button></li>
-              <li class="services-slider-controls-item"><button class="services-slider-controls-button" type="button">Гарантия</button></li>
-              <li class="services-slider-controls-item"><button class="services-slider-controls-button" type="button">Кредит</button></li>
+              <li class="services-slider-controls-item">
+                <button class="services-slider-controls-button services-button-current" type="button">Доставка</button>
+              </li>
+              <li class="services-slider-controls-item">
+                <button class="services-slider-controls-button" type="button">Гарантия</button>
+              </li>
+              <li class="services-slider-controls-item">
+                <button class="services-slider-controls-button" type="button">Кредит</button>
+              </li>
             </ul>
             <div class="services-slider-delivery">
               <h3>Доставка</h3>
