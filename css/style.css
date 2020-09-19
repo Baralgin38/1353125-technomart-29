@@ -258,6 +258,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 12px;
   padding-left: 45px;
 
+  color: var(--basic-black);
   background-color: var(--white);
 }
 
@@ -266,6 +267,7 @@ input[type="radio"].visually-hidden {
   
   padding: 12px 24px;
 
+  color: var(--basic-black);
   background-color: var(--white);
 }
 
@@ -640,6 +642,7 @@ input[type="radio"].visually-hidden {
 .services-slider-controls-button:focus {
   outline: 0;
   outline-offset: 0;
+  color: var(--white);
   background-color: var(--basic-darkgrey);
 }
 
@@ -857,6 +860,10 @@ input[type="radio"].visually-hidden {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+.breadcrumbs a {
+  color: var(--basic-black);
 }
 
 /*------- sorting -------*/
