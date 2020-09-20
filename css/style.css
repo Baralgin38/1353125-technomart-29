@@ -172,13 +172,20 @@ input[type="radio"].visually-hidden {
 }
 
 .user-navigation-search {
+  height: 42px;
+  
   border: none;
   
   background-color: var(--basic-darkgrey);
 }
 
 .user-navigation-container input::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+
   opacity: 1;
+
   color: var(--white);
 }
 
@@ -404,8 +411,11 @@ input[type="radio"].visually-hidden {
 
 .promo-slider-first-slide,
 .promo-slider-second-slide {
+  position: relative;
+  
   width: 620px;
   height: 266px; /*Подложка под изображение*/
+  margin-bottom: 40px; /* временный отступ , чтобы разграничить блоки до сеток  */
   
   background-color: var(--basic-greylight);
 }
@@ -422,6 +432,12 @@ input[type="radio"].visually-hidden {
 .promo-slider-second-slide p {
   font-size: 18px;
   line-height: 24px;
+}
+
+.promo-slider-header {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .promo-slider-first-slide a,
@@ -926,6 +942,13 @@ input[type="radio"].visually-hidden {
   border: none;
 
   color: var(--basic-red);
+}
+
+.sorting-up,
+.sorting-down {
+  border: none;
+
+  background-color: transparent;
 }
 
 /*---------- catalog ---------*/
