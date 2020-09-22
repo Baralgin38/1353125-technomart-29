@@ -158,7 +158,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-navigation a {
-  display: inline-block;
+  /*display: inline-block;*/
 
   color: var(--white);
 }
@@ -172,6 +172,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-navigation-search {
+  width: 270px;
   height: 42px;
   
   border: none;
@@ -291,6 +292,9 @@ input[type="radio"].visually-hidden {
 }
 
 .main-navigation {
+  padding: 0;
+  margin: 0;
+  
   font-size: 18px;
   line-height: 24px;
   
@@ -301,6 +305,13 @@ input[type="radio"].visually-hidden {
 }
 
 .main-navigation a {
+  display: block;
+  
+  padding-top: 16px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 27px;
+  
   color: var(--white);
 }
 
@@ -1057,4 +1068,59 @@ input[type="radio"].visually-hidden {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
+}
+
+/*------- layout ---------*/
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+}
+
+/*---- header ------*/
+
+.user-navigation-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-navigation-layout-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.header-container-layout-wrapper { /* пока не уверен нужен ли тут грид, просто захотел попробовать */
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.promo {
+  outline: 5px solid red;
+  outline-offset: -5px;
+  display: grid;
+  grid-template-rows: repeat(3, 123px);
+  grid-template-columns: repeat(3, 300px);
+  gap: 20px;
+}
+
+.promo-slider-second-slide {
+  display: none;
+}
+
+.promo-slider {
+  grid-column: 1 / span 2;
+  grid-row: 2 / -1;
 }
