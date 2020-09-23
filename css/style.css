@@ -86,6 +86,7 @@
   --inset-button-services-slider: #405069;
   --sorting-box-color: #F7F3EC;
   --pagination-border-color: #E5E5E5;
+  --border-grey-color: #EAEAEA;
 }
 
 /* -------global --------*/
@@ -453,6 +454,10 @@ input[type="radio"].visually-hidden {
 
 .promo-slider-first-slide a,
 .promo-slider-second-slide a {
+  position: absolute; 
+  bottom: 35px; /* пока что временно - значения не правильные */
+  left: 20px; 
+  
   padding: 10px 46px;
 
   font-size: 14px;
@@ -472,6 +477,20 @@ input[type="radio"].visually-hidden {
 .promo-slider-first-slide a:active,
 .promo-slider-second-slide a:active {
   background-color: var(--active-red);
+}
+
+.promo-slider-first-slide .previous-slide,
+.promo-slider-second-slide .previous-slide  {
+  position: absolute;
+  top: 135px;
+  left: 15px;
+}
+
+.promo-slider-first-slide .next-slide,
+.promo-slider-second-slide .next-slide {
+  position: absolute;
+  top: 135px;
+  right: 15px;
 }
 
 /*------popular-product------*/
@@ -536,6 +555,10 @@ input[type="radio"].visually-hidden {
   font-weight: bold;
 
   list-style: none;
+}
+
+.popular-product-item {
+  border: 1px solid var(--border-grey-color);
 }
 
 .popular-product-item p:first-of-type {
@@ -615,6 +638,10 @@ input[type="radio"].visually-hidden {
   opacity: .5;
 }
 
+.product-item-hover {
+  display: none; 
+}
+
 /*-----popular-manufacturer-------*/
 
 .popular-manufacturer-list {
@@ -627,6 +654,8 @@ input[type="radio"].visually-hidden {
 /*------services-------*/
 
 .services {
+  border-bottom: 1px dotted var(--basic-background);/* чтобы не выпадал нижний отступ. Нужно для марджина по макету*/
+  
   background-color: var(--basic-background);
 }
 
@@ -637,6 +666,14 @@ input[type="radio"].visually-hidden {
   font-weight: normal;
 }
 
+.services-main-container h3 {
+  margin-top: 0;
+}
+
+.services-main-container > p {
+  margin-bottom: 70px;
+}
+
 .services-main-container p {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
@@ -644,6 +681,9 @@ input[type="radio"].visually-hidden {
 }
 
 .services-slider-controls-list {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
 }
 
@@ -714,6 +754,11 @@ input[type="radio"].visually-hidden {
 }
 
 /*------- about ---------*/
+
+.about {
+  border-bottom: 1px dotted var(--white);
+  /* Для того чтобы из блока не выпадали отступы его детей */
+}
 
 .about-main-container h3 {
   font-size: 30px;
@@ -1080,7 +1125,7 @@ input[type="radio"].visually-hidden {
   min-height: 100%;
 }
 
-/*---- header ------*/
+/*---- header-layout ------*/
 
 .user-navigation-container {
   display: flex;
@@ -1107,9 +1152,9 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
 }
 
+/*---- promo-layout -----*/
+
 .promo {
-  outline: 5px solid red;
-  outline-offset: -5px;
   display: grid;
   grid-template-rows: repeat(3, 123px);
   grid-template-columns: repeat(3, 300px);
@@ -1123,4 +1168,96 @@ input[type="radio"].visually-hidden {
 .promo-slider {
   grid-column: 1 / span 2;
   grid-row: 2 / -1;
+}
+
+/*----- popular-product-layout -----*/
+  
+.popular-product {
+  display: grid;
+  
+  grid-template-rows: 89px auto;
+  grid-template-columns: auto;
+  row-gap: 20px;
+}
+
+.popular-product-header {
+  display: flex;
+  
+  grid-row: 1;
+  grid-column: 1;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular-product-list {
+  display: grid;
+  
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+
+  grid-column: 1;
+}
+
+/*---- .popular-manufacturer-layout ----*/
+
+.popular-manufacturer {
+  display: grid;
+
+  grid-template-rows: 89px auto;
+  grid-template-columns: auto;
+  row-gap: 20px;
+}
+
+.popular-manufacturer-header {
+  display: flex;
+  
+  grid-row: 1;
+  grid-column: 1;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular-manufacturer-list {
+  display: grid;
+
+  grid-template-rows: 145px 145px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+
+  grid-column: 1;
+}
+
+/*------ services-layout -------*/
+
+.services-slider-guarantee,
+.services-slider-credit {
+  display: none;
+}
+
+.services-slider {
+  display: flex;
+
+  margin-bottom: 99px;
+}
+
+.services-slider-controls-list {
+  margin-right: 80px;
+}
+
+/*----- about-layout ------*/
+
+.about-main-container {
+  display: flex;
+
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.about-contacts {
+  display: flex;
+
+  flex-direction: column;
 }
