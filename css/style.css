@@ -147,6 +147,10 @@ input[type="radio"].visually-hidden {
 /*-------header------*/
 
 .main-header {
+  border-bottom: 1px dotted var(--basic-background);
+  margin-bottom: 40px;
+  /*временно для визуального разделения блоков*/
+
   background-color: var(--basic-background);
 }
 
@@ -159,8 +163,6 @@ input[type="radio"].visually-hidden {
 }
 
 .user-navigation a {
-  /*display: inline-block;*/
-
   color: var(--white);
 }
 
@@ -654,6 +656,7 @@ input[type="radio"].visually-hidden {
 /*------services-------*/
 
 .services {
+  border-top: 1px dotted var(--basic-background);
   border-bottom: 1px dotted var(--basic-background);/* чтобы не выпадал нижний отступ. Нужно для марджина по макету*/
   
   background-color: var(--basic-background);
@@ -664,6 +667,10 @@ input[type="radio"].visually-hidden {
   font-size: 30px;
   line-height: 30px;
   font-weight: normal;
+}
+
+.services-main-container h2 {
+  margin-top: 64px;
 }
 
 .services-main-container h3 {
@@ -1146,10 +1153,17 @@ input[type="radio"].visually-hidden {
   gap: 20px;
 }
 
+.user-area {
+  justify-self: end;
+}
+
 .main-navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-bottom: 60px;
 }
 
 /*---- promo-layout -----*/
@@ -1159,6 +1173,9 @@ input[type="radio"].visually-hidden {
   grid-template-rows: repeat(3, 123px);
   grid-template-columns: repeat(3, 300px);
   gap: 20px;
+
+  margin-bottom: 40px;
+  /*временно для визуального разделения блоков*/
 }
 
 .promo-slider-second-slide {
@@ -1178,6 +1195,9 @@ input[type="radio"].visually-hidden {
   grid-template-rows: 89px auto;
   grid-template-columns: auto;
   row-gap: 20px;
+
+  margin-bottom: 40px;
+  /*временно для визуального разделения блоков*/
 }
 
 .popular-product-header {
@@ -1195,7 +1215,7 @@ input[type="radio"].visually-hidden {
   
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 20px;
+  gap: 20px;
 
   grid-column: 1;
 }
@@ -1208,6 +1228,9 @@ input[type="radio"].visually-hidden {
   grid-template-rows: 89px auto;
   grid-template-columns: auto;
   row-gap: 20px;
+
+  margin-bottom: 40px;
+  /*временно для визуального разделения блоков*/
 }
 
 .popular-manufacturer-header {
@@ -1260,4 +1283,57 @@ input[type="radio"].visually-hidden {
   display: flex;
 
   flex-direction: column;
+}
+
+/*----- footer-layout ------*/
+
+.footer-navigation-container {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.footer-navigation-list {
+  display: flex;
+
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.footer-navigation-item {
+  margin-right: 59px;
+}
+
+.footer-navigation-item:last-of-type {
+  margin-right: 0;
+}
+
+.footer-assortment-container {
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-assortment-list {
+  display: flex;
+
+  align-items: flex-start;
+}
+
+.footer-assortment-item {
+  margin-right: 59px;
+}
+
+.footer-assortment-item:last-of-type {
+  margin-right: 0;
+}
+
+.social-main-container {
+  display: flex;
+
+  justify-content: space-between;
 }
