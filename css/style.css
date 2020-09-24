@@ -984,6 +984,21 @@ input[type="radio"].visually-hidden {
   color: var(--basic-black);
 }
 
+.breadcrumbs-main-link {
+  position: relative;
+}
+
+.breadcrumbs-main-link a::before {
+  position: absolute;
+  
+  content: "";
+  top: 4px;
+  width: 14px;
+  height: 12px;
+
+  background-color: var(--basic-black);
+}
+
 /*------- sorting -------*/
 
 .catalog-header {
@@ -1375,4 +1390,31 @@ input[type="radio"].visually-hidden {
   display: flex;
 
   justify-content: space-between;
+}
+
+.footer-social-list {
+  display: flex;
+
+  align-items: center;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 5px;
+}
+
+
+/*------- inner-layout ------*/
+/*------- breadcrumbs-layout -------*/
+
+.breadcrumbs {
+  display: flex;
+}
+
+.breadcrumbs p {
+  margin: 0;
+  margin-right: 41px;
+}
+
+.breadcrumbs p:last-child {
+  margin-right: 0;
 }
