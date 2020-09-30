@@ -1083,6 +1083,8 @@ input[type="radio"].visually-hidden {
 .sorting-down {
   border: none;
 
+  outline: 0;
+  outline-offset: 0;
   background-color: transparent;
 }
 
@@ -1141,8 +1143,9 @@ input[type="radio"].visually-hidden {
   
   padding: 10px 15px;
   border: 1px solid var(--pagination-border-color);
-  
   border-radius: 2px;
+
+  color: var(--basic-black);
 }
 
 .catalog-controls a:hover,
