@@ -87,6 +87,7 @@
   --sorting-box-color: #F7F3EC;
   --pagination-border-color: #E5E5E5;
   --border-grey-color: #EAEAEA;
+  --active-link-header: #161D29;
 }
 
 /* -------global --------*/
@@ -162,33 +163,45 @@ input[type="radio"].visually-hidden {
   background-color: var(--basic-darkgrey);
 }
 
+.header-logo svg {
+  fill: var(--basic-red);
+}
+
+.header-logo:active svg {
+  fill: var(--active-red);
+}
+
 .user-navigation a {
   outline: 0;
   outline-offset: 0; 
+  cursor: pointer;
   color: var(--white);
 }
 
 .bookmarks,
 .basket {
   padding-top: 9px;
-  padding-left: 21px;
+  padding-left: 43px;
   padding-bottom: 9px;
-  padding-right: 35px;
+  padding-right: 24px;
 }
 
 .user-navigation-search {
   width: 270px;
   height: 42px;
-  
+  padding: 0;
   border: none;
+  box-sizing: border-box;
+
+  font-family: "Cuprum", "Arial", sans-serif;
   
   background-color: var(--basic-darkgrey);
 }
 
 .user-navigation-search::placeholder {
-  font-family: inherit;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 42px;
+  vertical-align: middle;
 
   opacity: 1;
 
@@ -239,6 +252,8 @@ input[type="radio"].visually-hidden {
 }
 
 .header-info {
+  margin: 0;
+
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
@@ -1309,6 +1324,10 @@ input[type="radio"].visually-hidden {
 }
 
 .page-body {
+  display: grid;
+  
+  grid-template-rows: min-content 1fr min-content;
+
   min-height: 100%;
 }
 
@@ -1323,14 +1342,15 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
-.header-container-layout-wrapper { /* пока не уверен нужен ли тут грид, просто захотел попробовать */
-  
+.header-container-layout-wrapper {
   display: grid;
+
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  align-items: flex-start;
 }
 
 .user-area {
@@ -1340,7 +1360,7 @@ input[type="radio"].visually-hidden {
 .main-navigation-list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -1548,7 +1568,7 @@ input[type="radio"].visually-hidden {
   margin-right: 0;
 }
 
-/* catalog-layout */
+/*------ catalog-layout -------*/
 
 .proto-form {
   width: 220px;
@@ -1584,7 +1604,7 @@ input[type="radio"].visually-hidden {
   gap: 20px;
 }
 
-/* sorting-layout */
+/*------ sorting-layout --------*/
 
 .sorting {
   display: flex;
@@ -1592,4 +1612,198 @@ input[type="radio"].visually-hidden {
   min-height: 38px;
 
   align-items: center;
+}
+
+/*------- decor -------*/
+/*------- header ------*/
+
+.user-navigation .container {
+  position: relative;
+}
+
+.header-logo {
+  position: absolute;
+}
+
+.user-navigation-layout-wrapper {
+  position: relative;
+
+  margin-left: 220px;
+} /* нормально ли так сделать с логотипом ? */
+
+.user-navigation-search {
+  padding-left: 42px;
+}
+
+.user-navigation-search-container {
+  position: relative;
+}
+
+.user-navigation-search-container .icon-search {
+  position: absolute;
+
+  top: 12px;
+  left: 17px;
+
+  fill: var(--promo-link);
+}
+
+/*-----Придумать как сделать стили при наведении на картинку лупы и плэйсхолдер---------*/
+
+.user-navigation-search-container:hover .icon-search {
+  fill: var(--white);
+}
+
+.user-navigation-search:focus::placeholder,
+.user-navigation-search:active::placeholder {
+  color: var(--basic-black);
+}
+
+.user-navigation-search:focus + .icon-search,
+.user-navigation-search:active + .icon-search {
+  fill: var(--basic-red);
+}
+
+.bookmarks {
+  position: relative;
+  
+  margin-right: 7px;
+}
+
+.bookmarks::before {
+  position: absolute;
+
+  content: "";
+  top: 13px;
+  left: 20px;
+  width: 14px;
+  height: 16px;
+  
+  opacity: .3;
+  background-image: url(../img/icon-bookmark.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.bookmarks:hover::before,
+.bookmarks:focus::before {
+  opacity: 1;
+}
+
+.bookmarks:active::before {
+  opacity: .3;
+}
+
+.bookmarks:active {
+  color: var(--white-alpha);
+  background-color: var(--active-link-header);
+}
+
+.basket {
+  position: relative;
+  
+  margin-right: 2px;
+}
+
+.basket::before {
+  position: absolute;
+
+  content: "";
+  top: 13px;
+  left: 20px;
+  width: 15px;
+  height: 15px;
+
+  opacity: .3;
+  background-image: url(../img/icon-cart.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.basket:hover::before,
+.basket:focus::before {
+  opacity: 1;
+}
+
+.basket:active::before {
+  opacity: .3;
+}
+
+.basket:active {
+  color: var(--white-alpha);
+  background-color: var(--active-link-header);
+}
+
+.header-info {
+  margin-top: 43px;
+  margin-left: 30px;
+}
+
+.header-phone-container {
+  margin-top: 44px;
+  margin-right: -1px;
+}
+
+.header-phone {
+  position: relative;
+}
+
+.header-phone::before {
+  position: absolute;
+
+  content: "";
+  top: 13px;
+  left: 37px;
+  width: 19px;
+  height:19px;
+
+  background-image: url(../img/icon-tel.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.header-phone-container address {
+  margin-left: 12px;
+}
+
+.user-log-out {
+  position: relative;
+
+  justify-self: flex-start;
+  margin-top: 46px;
+  margin-left: 19px;
+}
+
+.icon-login {
+  position: absolute;
+
+  top: 13px;
+  left: 20px;
+
+  fill: var(--basic-greylight);
+}
+
+.log-in:hover + .icon-login,
+.log-in:focus + .icon-login {
+  fill: var(--basic-grey);
+}
+
+.log-in:active + .icon-login {
+  fill: var(--basic-greylight);
+}
+
+.user-area .log-in {
+  margin-right: 5px;
+}
+
+.main-navigation {
+  margin-top: 41px;
+}
+
+.main-navigation-item {
+  margin-left: 5px;
+}
+
+.main-navigation-item:first-of-type {
+  margin-left: 26px;
 }
