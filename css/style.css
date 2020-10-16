@@ -1470,7 +1470,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 }
 
-.filter > p {
+.filter h2 {
   width: 100%;
   min-height: 38px;
   margin: 0px;
@@ -1482,6 +1482,7 @@ input[type="radio"].visually-hidden {
 
   font-size: 13px;
   line-height: 18px;
+  font-weight: normal;
   text-transform: uppercase;
 
   background-color: var(--sorting-box-color);
