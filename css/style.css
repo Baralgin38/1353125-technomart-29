@@ -1421,6 +1421,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
   border: none;
 
+  cursor: pointer;
   outline: 0;
   outline-offset: 0;
 
@@ -2477,7 +2478,6 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
   align-items: center;
 }
-/*Догадываюсь что так вообще не нужно делать, но как привести карточки к обшему виду я пока не придумал. Разные размеры картинок и чтобы встать в ПП им всем нужны разыне отступы  */
 
 .popular-product-item .bfg-9000 {
   margin-top: 4px;
@@ -2764,7 +2764,6 @@ input[type="radio"].visually-hidden {
 .new > .mark-new {
   display: block;
 }
-/* На сколько нормально так реализовать появление метки new ? */
 
 /*--- inner-decor -----*/
 /*---- header-decor ----*/
@@ -2890,6 +2889,7 @@ input[type="radio"].visually-hidden {
 .catalog-item:focus,
 .catalog-item:focus-within {
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  
 }
 
 .catalog-item:hover img,
@@ -2904,17 +2904,10 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 
-.catalog-item:nth-of-type(3) {
-  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+.catalog-item {
+  transition: filter 0.3s ease-in-out;
 }
 
-.catalog-item:nth-of-type(3) img {
-  visibility: hidden;
-}
-
-.catalog-item:nth-of-type(3) .product-item-hover {
-  display: block;
-}
 
 .catalog-item-title {
   text-align: center;
