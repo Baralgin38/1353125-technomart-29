@@ -2165,8 +2165,6 @@ input[type="radio"].visually-hidden {
   fill: var(--promo-link);
 }
 
-/*-----Придумать как сделать стили при наведении на картинку лупы и плэйсхолдер---------*/
-
 .user-navigation-search-container:hover .icon-search {
   fill: var(--white);
 }
@@ -2175,15 +2173,23 @@ input[type="radio"].visually-hidden {
   background-color: inherit;
 }
 
-.user-navigation-search:focus::placeholder,
-.user-navigation-search:active::placeholder {
+.user-navigation-search:focus::placeholder {
   color: var(--basic-black);
 }
 
-.user-navigation-search:focus + .icon-search,
-.user-navigation-search:active + .icon-search {
+.user-navigation-search:active::placeholder {
+  opacity: .5;
+  
+  color: var(--white);
+}
+
+.user-navigation-search:focus + .icon-search {
   fill: var(--basic-red);
 }
+.user-navigation-search:active + .icon-search {
+  fill: var(--promo-link);
+}
+
 
 .bookmarks::before {
   position: absolute;
