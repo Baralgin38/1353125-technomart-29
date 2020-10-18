@@ -786,7 +786,7 @@ input[type="radio"].visually-hidden {
 
 .product-item-hover {
   position: absolute;
-  display: none;
+  transform: translate(110%);
   top: 38px;
   left: 40px;
 }
@@ -2455,17 +2455,21 @@ input[type="radio"].visually-hidden {
 .popular-product-item:hover img,
 .popular-product-item:focus img,
 .popular-product-item:focus-within img {
-  visibility: hidden;
+  transform: translate(-135%);
 }
 
 .popular-product-item:hover .product-item-hover,
 .popular-product-item:focus .product-item-hover,
 .popular-product-item:focus-within .product-item-hover {
-  display: block;
+  transform: translate(0%);
 }
 
 .popular-product-item {
   transition: filter 0.3s ease-in-out;
+}
+
+.popular-product-item img {
+  transition: transform 0.5s ease-in-out;
 }
 
 .popular-product-header h2 {
@@ -2755,6 +2759,7 @@ input[type="radio"].visually-hidden {
   padding-top: 8px;
   padding-left: 35px;
   box-sizing: border-box;
+  z-index: 1;
 
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
@@ -2902,19 +2907,23 @@ input[type="radio"].visually-hidden {
 .catalog-item:hover img,
 .catalog-item:focus img,
 .catalog-item:focus-within img {
-  visibility: hidden;
+  transform: translate(-135%);
 }
 
 .catalog-item:hover .product-item-hover, 
 .catalog-item:focus .product-item-hover,
 .catalog-item:focus-within .product-item-hover {
-  display: block;
+  transform: translate(0%);
 }
 
 .catalog-item {
-  transition: filter 0.3s ease-in-out;
+  transition: filter 0.4s ease-in-out;
 }
 
+.catalog-item img,
+.product-item-hover {
+  transition: transform 0.5s ease-in-out;
+}
 
 .catalog-item-title {
   text-align: center;
