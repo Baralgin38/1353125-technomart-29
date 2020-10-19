@@ -725,7 +725,7 @@ input[type="radio"].visually-hidden {
 
 .product-item-hover .button {
   width: 135px;
-  height: 38px;
+  min-height: 38px;
   border: none;
 
   border-radius: 2px;
@@ -2588,6 +2588,7 @@ input[type="radio"].visually-hidden {
 .services-slider-guarantee p {
   margin: 0;
   margin-top: 28px;
+  margin-right: 260px;
 }
 
 .services-slider-guarantee p {
@@ -2749,18 +2750,18 @@ input[type="radio"].visually-hidden {
   color: var(--basic-red);
 }
 
-.mark-new {
+.new::before {
   position: absolute;
-  top: 9px;
-  right: -28px;
-  display: none;
+  content: "New";
+  top: 10px;
+  right: -29px;
   width: 100px;
   height: 30px;
   padding-top: 8px;
   padding-left: 35px;
   box-sizing: border-box;
   z-index: 1;
-
+  
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -2770,10 +2771,6 @@ input[type="radio"].visually-hidden {
 
   color: var(--white);
   background-color: var(--basic-red);
-}
-
-.new > .mark-new {
-  display: block;
 }
 
 /*--- inner-decor -----*/
