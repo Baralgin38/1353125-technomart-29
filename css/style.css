@@ -1371,7 +1371,7 @@ input[type="radio"].visually-hidden {
 
 .sorting p {
   margin: 0;
-  margin-right: 140px;
+  margin-right: 139px; /*уменшено с 140 чтобы проверить в сафари отображение*/
   margin-left: 19px;
 }
 
@@ -1764,6 +1764,7 @@ input[type="radio"].visually-hidden {
   outline: 0;
   outline-offset: 0;
 
+  color: var(--basic-black);
   background-color: transparent;
 }
 
@@ -1774,6 +1775,7 @@ input[type="radio"].visually-hidden {
 
 .catalog-controls button:active {
   border: 1px solid var(--basic-red);
+  color: var(--basic-black);
 }
 
 /*------ info -------*/
