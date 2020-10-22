@@ -1371,7 +1371,7 @@ input[type="radio"].visually-hidden {
 
 .sorting p {
   margin: 0;
-  margin-right: 138px; /*уменшено с 140 чтобы проверить в сафари отображение*/
+  margin-right: 140px; /*уменшено с 140 чтобы проверить в сафари отображение*/
   margin-left: 19px;
 }
 
@@ -1401,7 +1401,7 @@ input[type="radio"].visually-hidden {
 }
 
 .sorting-type {
-  margin-right: 60px;
+  margin-right: 66px; /*Проверка на фоне комментирования пробелов в разметке*/
 }
 
 .sorting-button:hover,
