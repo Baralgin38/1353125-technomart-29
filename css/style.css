@@ -1675,6 +1675,9 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item-oldprice {
+  max-width: 160px;
+
+  text-align: center;
   text-decoration: line-through;
 
   color: var(--oldprice-color);
@@ -1723,8 +1726,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   width: 38px;
   min-height: 38px;
-  /* margin-right: 6px; */
-  /* padding: 10px 15px; */
   align-items: center;
   justify-content: center;
   border: 1px solid var(--pagination-border-color);
@@ -2575,6 +2576,10 @@ input[type="radio"].visually-hidden {
   margin-top: 26px;
   margin-right: 19px;
   flex-shrink: 0;
+}
+
+.popular-manufacturer-item a {
+  transition: filter 0.3s ease-in-out;
 }
 
 .popular-manufacturer-item a:hover,
