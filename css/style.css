@@ -304,6 +304,10 @@ input[type="radio"].visually-hidden {
   color: var(--basic-red);
 }
 
+.header-phone:focus {
+  border: 3px solid var(--intense-dadrkblue);
+}
+
 .header-phone-container address {
   margin-top: 2px;
   margin-left: 12px;
