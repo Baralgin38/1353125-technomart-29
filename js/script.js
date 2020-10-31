@@ -22,10 +22,21 @@ if (document.querySelector('.write-us-modal')) {
   writeUsModalForm.addEventListener('submit', function(evt) {
     if (!userName.value || !userEmail.value) {
       evt.preventDefault();
-      // userName.setAttribute('required', 'required');
       writeUsModal.classList.remove('error');
       writeUsModal.offsetWidth = writeUsModal.offsetWidth;
       writeUsModal.classList.add('error');
+      if (!userName.value) {
+        userName.style.borderColor = 'red';
+        userName.addEventListener('click', function () {
+          userName.style.borderColor = '';
+        });
+      }
+      if (!userEmail.value) {
+        userEmail.style.borderColor = 'red';
+        userEmail.addEventListener('click', function() {
+          userEmail.style.borderColor = '';
+        });
+      }
     }
   });
 
@@ -72,7 +83,7 @@ if (document.querySelector('.promo-slider')) {
   const promoNextSlide = promoSlider.querySelector('.next-slide');
   const promoPreviousSlide = promoSlider.querySelector('.previous-slide');
   const promoSliderControls = promoSlider.querySelectorAll('.promo-slider-control button');
-  let slideIndex = 0;
+  let slideIndex = 1;
 
   showSlides(slideIndex);
 
@@ -102,43 +113,6 @@ if (document.querySelector('.promo-slider')) {
     plusSlides(1);
   });
 }
-/* 
-//services-slider
-if (document.querySelector('.services-slider')) {
-  const servicesSlider = document.querySelector('.services-slider');
-  const servicesButtons = servicesSlider.querySelectorAll('.services-slider-controls-button');
-  const servicesSliderItems = servicesSlider.querySelectorAll('.services-slide');
-
-
-
-  var slideIndex = 1;
-
-  showSlides(slideIndex);
-  function showSlides (n) {
-    if (n < 1) {
-      slideIndex = servicesSliderItems.length;
-    } else if (n > servicesSliderItems.length) {
-      slideIndex = 1;
-    }
-    for (let i = 0; i < servicesSliderItems.length; i++) {
-      servicesSliderItems[i].classList.remove('current-slide');
-    }
-    for (let i = 0; i < servicesSliderItems.length; i++) {
-      servicesButtons[i].classList.remove('services-button-current');
-    }
-    servicesSliderItems[slideIndex - 1].classList.add('current-slide');
-    servicesButtons[slideIndex - 1].classList.add('services-button-current');
-  }
-
-  for (let i = 1; i <= servicesButtons.length; i++) {
-    servicesButtons[i].addEventListener('click', function () {
-      if (!servicesButtons[i].classList.contains('services-button-current')) {
-      slideIndex = i;
-      showSlides(slideIndex);
-      }
-    });
-  }
-} */
 
 // product-added
 if (document.querySelector('.product-added-modal')) {
