@@ -16,7 +16,8 @@
           <div class="user-navigation-layout-wrapper">
             <form class="user-navigation-form" action="https://echo.htmlacademy.ru" method="GET">
               <div class="user-navigation-search-container">
-                <input class="user-navigation-search" type="text" name="search" placeholder="Поиск:" aria-label="Поиск по сайту">
+                <label class="visually-hidden" for="navigation-search">Поиск по сайту</label>
+                <input class="user-navigation-search" type="text" id="navigation-search" name="search" placeholder="Поиск:">
                 <svg class="icon-search" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Иконка лупы"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z"/></svg>
               </div>
             </form>
@@ -415,7 +416,7 @@
               </div>
             </div>
             <label for="letter">Текст письма:</label>
-            <textarea id="letter" placeholder="В свободной форме"></textarea>
+            <textarea id="letter" name="letter" placeholder="В свободной форме"></textarea>
             <button class="write-us-modal-submit" type="submit">отправить</button>
           </form>
           <button class="button-close write-us-modal-close" type="button" aria-label="Закрыть">
