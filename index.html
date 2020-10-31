@@ -99,20 +99,20 @@
             <a href="#">Бесплатно</a>
           </div>
           <div class="promo-slider">
-            <div class="promo-slider-item current-slide">
-              <div class="promo-slider-header">
-                <h3>Перфораторы</h3>
-                <p>Настоящие мужские игрушки</p>
-              </div>
-              <img src="img/perforator.jpg" width="620" height="266" alt="Посмотрите на наш ассортимент перфораторов.">
-              <a href="inner.html">открыть каталог</a>
-            </div>
             <div class="promo-slider-item">
               <div class="promo-slider-header">
                 <h3>Дрели</h3>
                 <p>Соседям на радость!</p>
               </div>
               <img src="img/drills.jpg" width="620" height="266" alt="Посмотрите на наш ассортимент дрелей.">
+              <a href="inner.html">открыть каталог</a>
+            </div>
+            <div class="promo-slider-item">
+              <div class="promo-slider-header">
+                <h3>Перфораторы</h3>
+                <p>Настоящие мужские игрушки</p>
+              </div>
+              <img src="img/perforator.jpg" width="620" height="266" alt="Посмотрите на наш ассортимент перфораторов.">
               <a href="inner.html">открыть каталог</a>
             </div>
             <button class="previous-slide" type="button" aria-label="предыдущий слайд"></button>
@@ -425,29 +425,6 @@
       </div>
     </footer>
 
-   <!--  <div class="write-us-modal">
-      <div class="write-us-modal-container">
-        <form class="write-us-modal-form" action="https://echo.htmlacademy.ru" method="POST">
-          <div class="user-info-container">
-            <div class="user-name-container">
-              <label for="user-name">Ваше имя:</label>
-              <input id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
-            </div>
-            <div class="user-email-container">
-              <label for="user-email">Ваш e-mail:</label>
-              <input id="user-email" type="email" name="user-email" placeholder="email@example.com">
-            </div>
-          </div>
-          <label for="letter">Текст письма:</label>
-          <textarea id="letter" placeholder="В свободной форме"></textarea>
-          <button class="write-us-modal-submit" type="submit">отправить</button>
-        </form>
-        <button class="button-close write-us-modal-close" type="button" aria-label="Закрыть">
-          <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M13.27 10.5l7.42-7.42a1 1 0 000-1.42L19.34.31a1 1 0 00-1.42 0L10.5 7.73 3.08.3a1 1 0 00-1.42 0L.3 1.66a1 1 0 000 1.42l7.43 7.42L.3 17.92a1 1 0 000 1.42l1.35 1.36a1 1 0 001.42 0l7.42-7.43 7.42 7.43a1 1 0 001.42 0l1.36-1.36a1 1 0 000-1.42l-7.43-7.42z" fill="currentColor"/></svg>
-        </button>
-      </div>
-    </div> -->
-
     <div class="map-modal">
       <div class="map-modal-container">
         <p class="visually-hidden"> 
@@ -459,6 +436,19 @@
         </button>
       </div>
     </div>
-    <script src="js/modal.js"></script>
+
+    <div class="product-added-modal">
+      <div class="product-added-modal-container">
+        <p>Товар добавлен в корзину!</p>
+        <div class="product-added-button-container">
+          <button class="product-added-button place-order" type="button">Оформить заказ</button>
+          <button class="product-added-button continue" type="button">Продолжить покупки</button>
+        </div>
+        <button class="button-close product-added-modal-close" type="button" aria-label="Закрыть">
+          <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M13.27 10.5l7.42-7.42a1 1 0 000-1.42L19.34.31a1 1 0 00-1.42 0L10.5 7.73 3.08.3a1 1 0 00-1.42 0L.3 1.66a1 1 0 000 1.42l7.43 7.42L.3 17.92a1 1 0 000 1.42l1.35 1.36a1 1 0 001.42 0l7.42-7.43 7.42 7.43a1 1 0 001.42 0l1.36-1.36a1 1 0 000-1.42l-7.43-7.42z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

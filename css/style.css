@@ -1143,6 +1143,7 @@ input[type="radio"].visually-hidden {
 
   font-size: 18px;
   line-height: 24px;
+  color: var(--basic-black);
 }
 
 .user-info-container {
@@ -3093,31 +3094,31 @@ input[type="radio"].visually-hidden {
   z-index: 2;
 }
 
-/* @keyframes error {
+ @keyframes error {
   0%,
   100% {
-    transform: translate(0%, 0%);
+    transform: translate(-50%, -50%);
   }
   10%,
   30%,
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    transform: translate(-52%, -50%);
   }
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    transform: translate(-48%, -50%);
   }
 }
 
 .error {
   animation-name: error;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-} */
+  animation-duration: .8s;
+  animation-timing-function: linear;
+} 
 
 @keyframes animation-map {
   0% {
