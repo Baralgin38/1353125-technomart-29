@@ -94,12 +94,12 @@ if (document.querySelector('.promo-slider')) {
       slideIndex = 1;
     }
     for (let i = 0; i < promoSliderItems.length; i++) {
-      promoSliderItems[i].style.display = 'none';
+      promoSliderItems[i].classList.remove('current-slide');
     }
     for (let i = 0; i < promoSliderItems.length; i++) {
       promoSliderControls[i].classList.remove('active');
     }
-    promoSliderItems[slideIndex - 1].style.display = 'block';
+    promoSliderItems[slideIndex - 1].classList.add('current-slide');
     promoSliderControls[slideIndex - 1].classList.add('active');
   }
 
