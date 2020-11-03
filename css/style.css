@@ -100,6 +100,7 @@
   --filter-range-total-color: #D7DCDE;
   --filter-range-active-color: #00CA74;
   --filter-toggle-color: #ABABAB;
+  --modal-shadow:  rgba(0, 0, 0, 0.15);
 }
 
 /* -------global --------*/
@@ -1083,8 +1084,8 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   z-index: 2;
 
-  -webkit-filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
-  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  -webkit-filter: drop-shadow(0px 4px 20px var(--modal-shadow));
+  filter: drop-shadow(0px 4px 20px var(--modal-shadow));
   background-image: 
     linear-gradient(
       to bottom, 
@@ -1235,8 +1236,8 @@ input[type="radio"].visually-hidden {
   width: inherit;
   height: inherit;
 
-  -webkit-filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));
-  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));
+  -webkit-filter: drop-shadow(0px 4px 12px var(--modal-shadow));
+  filter: drop-shadow(0px 4px 12px var(--modal-shadow));
   background-image: url(../img/map-modal.jpg);
   background-repeat: no-repeat;
   background-position: -13px -20px;
@@ -1742,7 +1743,7 @@ input[type="radio"].visually-hidden {
 
 .catalog-controls button {
   width: 140px;
-  min-height: 38px;
+  min-height: 40px;
   border: 1px solid var(--pagination-border-color);
   border-radius: 2px;
 
@@ -1819,7 +1820,7 @@ input[type="radio"].visually-hidden {
       to bottom, 
       var(--white) 60%,
       var(--modal-footer-color) 60%);
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px var(--modal-shadow);
 }
 
 .product-added-modal-container {
@@ -2488,8 +2489,8 @@ input[type="radio"].visually-hidden {
 .popular-product-item:hover,
 .popular-product-item:focus,
 .popular-product-item:focus-within{
-  -webkit-filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
-  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  -webkit-filter: drop-shadow(0px 4px 20px var(--modal-shadow));
+  filter: drop-shadow(0px 4px 20px var(--modal-shadow));
 }
 
 .popular-product-item:hover img,
@@ -2598,8 +2599,8 @@ input[type="radio"].visually-hidden {
 
 .popular-manufacturer-item a:hover,
 .popular-manufacturer-item a:focus {
-  -webkit-filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
-  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  -webkit-filter: drop-shadow(0px 4px 20px var(--modal-shadow));
+  filter: drop-shadow(0px 4px 20px var(--modal-shadow));
 }
 
 .popular-manufacturer-item:active {
@@ -2737,8 +2738,6 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-
-  font-size: 0px;
 
   background-color: var(--social-icon-color);
 }
@@ -2948,8 +2947,8 @@ input[type="radio"].visually-hidden {
 .catalog-item:hover,
 .catalog-item:focus,
 .catalog-item:focus-within {
-  -webkit-filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
-  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  -webkit-filter: drop-shadow(0px 4px 20px var(--modal-shadow));
+  filter: drop-shadow(0px 4px 20px var(--modal-shadow));
   
 }
 
